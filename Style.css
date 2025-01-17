@@ -1,0 +1,179 @@
+/* General Styling */
+.container {
+    width: 90%; /* Flexible width for responsiveness */
+    max-width: 400px; /* Restricts the maximum size on larger screens */
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-image: url(learning2.png);
+    position: relative;
+    color: white;
+    margin: 0 auto 30px; /* Center horizontally and add bottom margin */
+    box-sizing: border-box; /* Includes padding in the width */
+}
+
+.container::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.container > * {
+    position: relative;
+    z-index: 2; /* Ensures content appears above the overlay */
+}
+
+/* Text Styles */
+h2, h3, h4 {
+    margin-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h4 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p, p1 {
+    margin: 10px 0; /* Consistent spacing */
+    color: rgb(247, 245, 245);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    padding: 0;
+}
+
+.availability {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 0.6rem;
+}
+
+.availability ul {
+    list-style: none;
+}
+
+/* Buttons */
+#apply, #view {
+    background-color: rgb(199, 15, 15);
+    color: white;
+    padding: 5px 10px; /* Responsive padding */
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: auto; /* Adjusts width dynamically */
+    max-width: 120px; /* Limits width for larger screens */
+    float: right;
+    height: auto;
+
+}
+
+#apply:hover, #view:hover {
+    background-color: darkred;
+}
+
+#view{
+    margin-top: -38px;
+
+}
+.status {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    color: white;
+    margin: 0 auto 20px; /* Center and spacing */
+    box-shadow: 0 4px 10px rgba(1, 0, 0, 0.1);
+}
+
+/* Image */
+img {
+    width: 10%; /* Flexible width for responsiveness */
+    max-width: 50px; /* Limits size */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 53px;
+    cursor: pointer;
+}
+
+/* Tracker and Existing Elements */
+#tracker {
+    margin-top: 10px;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+#existing {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+/* Dashboard Styling */
+.dashboard {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Align items to left and right */
+    align-items: center; /* Vertically center items */
+    padding: 10px 15px; /* Add spacing */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.dashboard h5 {
+    margin: 0; /* Remove extra margin */
+    font-family: Arial, sans-serif;
+    font-size: 1rem; /* Scales well for small screens */
+    color: #000; /* Default text color */
+}
+
+#notify {
+    display: inline-block;
+    margin: 0;
+}
+
+#notify img {
+    width: 40px; /* Scaled icon size for small screens */
+    height: 40px;
+    object-fit: contain; /* Keeps aspect ratio */
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    .container, .status {
+        width: 45%; /* Adapts to tablet or larger screens */
+    }
+}
+
+.bodyy h1{
+    font-size: 5.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: -10px;
+}
+
+.bodyy p{
+    color: rgb(44, 40, 40);
+    margin-top: -75px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
