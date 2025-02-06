@@ -5,60 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account - UniCoApply</title>
     <link rel="stylesheet" href="Signup.css">
+    <link rel="Icon" type="jpg" href="unicoApply.png">
 </head>
 <body>
-    <div class="logo">
-        <a href=""><img src="unicoApply.png" alt="Uni-coApply Logo"></a>
+    <div class="container">
+        <div class="logo">
+            <a href="#"><img src="unicoApply.png" alt="Uni-coApply Logo"></a>
+        </div>
+        
+        <form id="signupForm" action="http://localhost/Unico-Apply/signup.php" method="POST" enctype="application/x-www-form-urlencoded">
+            <fieldset>
+                <legend>Create myUnico Account</legend>
+                
+                <b>Name :</b><br/>
+                <input type="text" id="name" name="name" required><br/>
+                
+                <b>Surname :</b><br/>
+                <input type="text" id="surname" name="surname" required><br/>
+                
+                <b>Email :</b><br/>
+                <input type="email" id="email" name="email" required><br/>
+                
+                <b>Cell Number :</b><br/>
+                <input type="tel" id="cell" name="cell" required><br/>
+                
+                <b>ID Number :</b><br/>
+                <input type="text" id="idNumber" name="idNumber" required onkeyup="checkID()">
+                <span id="idMessage" style="color: red; font-weight: bold;"></span>
+                <br/>
+                
+                <b>Gender :</b><br/>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                    <option value="Transgender">Transgender</option>
+                    <option value="Genderfluid">Genderfluid</option>
+                    <option value="Agender">Agender</option>
+                    <option value="Other">Other</option>
+                </select><br/>
+                
+                <b>Completed Matric In :</b><br/>
+                <input type="date" id="matricYear" name="matricYear" required><br/>
+                
+                <b>Password :</b><br/>
+                <input type="password" id="password" name="password" required>
+                <span id="passwordStrength"></span><br/>
+                
+                <b>Confirm Password :</b><br/>
+                <input type="password" id="confirmPassword" name="confirmPassword" required><br/>
+                
+                <input type="submit" id="submit" value="Sign Up">
+                <p>Already Have myUnico Account? <a href="#">Go To myUnico</a></p><br/>
+            </fieldset>
+        </form>
     </div>
-    
-    <form id="signupForm" action="http://localhost/Unico-Apply/signup.php" method="POST" enctype="application/x-www-form-urlencoded">
-        <fieldset>
-            <legend>Create myUnico Account</legend>
-            
-            <b>Name :</b><br/>
-            <input type="text" id="name" name="name" required><br/>
-            
-            <b>Surname :</b><br/>
-            <input type="text" id="surname" name="surname" required><br/>
-            
-            <b>Email :</b><br/>
-            <input type="email" id="email" name="email" required><br/>
-            
-            <b>Cell Number :</b><br/>
-            <input type="tel" id="cell" name="cell" required><br/>
-            
-            <b>ID Number :</b><br/>
-<input type="text" id="idNumber" name="idNumber" required onkeyup="checkID()">
-<span id="idMessage" style="color: red; font-weight: bold;"></span>
-<br/>
-
-            
-            <b>Gender :</b><br/>
-            <select id="gender" name="gender" required>
-                <option value="">Select Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Non-Binary">Non-Binary</option>
-                <option value="Transgender">Transgender</option>
-                <option value="Genderfluid">Genderfluid</option>
-                <option value="Agender">Agender</option>
-                <option value="Other">Other</option>
-            </select><br/>
-            
-            <b>Completed Matric In :</b><br/>
-            <input type="date" id="matricYear" name="matricYear" required><br/>
-            
-            <b>Password :</b><br/>
-            <input type="password" id="password" name="password" required>
-            <span id="passwordStrength"></span><br/>
-            
-            <b>Confirm Password :</b><br/>
-            <input type="password" id="confirmPassword" name="confirmPassword" required><br/>
-            
-            <input type="submit" id="submit" value="Sign Up">
-            <p>Already Have myUnico Account? <a href="#">Go To myUnico</a></p><br/>
-        </fieldset>
-    </form>
 
     <script src="Signup.js"></script>
 </body>

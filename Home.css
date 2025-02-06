@@ -43,9 +43,12 @@
 }
 
 .welcoming p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    margin-bottom: 10px 10px 20px 0;
+    font-family: "Poppins", sans-serif; /* Modern, clean font */
+    font-size: 1.2rem;
+    line-height: 1.8; /* Increases space between lines */
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .counter-section {
