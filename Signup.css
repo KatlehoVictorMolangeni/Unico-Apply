@@ -1,0 +1,93 @@
+body {
+    background-image: url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 200%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+
+
+}
+
+fieldset {
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    width: 100%;
+}
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#submit {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: blueviolet;
+    color: antiquewhite;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 20px;
+    width: 40%;
+    text-align: center;
+}
+
+#submit:hover {
+    color: blueviolet;
+    background-color: antiquewhite;
+    transform: scale(1.05);
+}
+
+legend {
+    color: rgb(2, 2, 77);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        max-width: 90%;
+        padding: 15px;
+    }
+    fieldset {
+        padding: 15px;
+    }
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -5px;
+    display: block;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    transition: transform 0.5s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}

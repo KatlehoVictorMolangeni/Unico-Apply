@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-image: url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure full screen height */
+    width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2px;
+    text-align: left;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+        text-align: center; /* Center-align for a better look on small screens */
+    }
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 100%; /* Allow full width on smaller screens */
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h3 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.faq-item h3 .arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+    color: #666;
+}
+
+.faq-item.active h3 .arrow {
+    transform: rotate(180deg);
+}
+
+.faq-item p {
+    margin-top: 10px;
+    display: none;
+    font-size: 1rem;
+    color: #666;
+}
+
+.faq-item.active p {
+    display: block;
+}
+
+.chat-box {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #555;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    text-align: center; /* Align text for better readability */
+}
+
+.chat-box img {
+    width: 50px; /* Adjusted size for smaller screens */
+    height: 50px;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.5s;
+}
+
+.chat-box img:hover{
+    transform: scale(2.2);
+}
+
+.chat-box span {
+    line-height: 1.4;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    transition: transform 0.5s;
+    padding: 20px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .chat-box img {
+        margin-bottom: 20px; /* Add spacing for better alignment */
+    }
+
+    .faq-item h3 {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    .faq-item p {
+        font-size: 0.9rem; /* Adjust paragraph size for better fit */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-box input {
+        font-size: 14px; /* Smaller font for smaller devices */
+        padding: 8px 10px; /* Reduce padding for compactness */
+    }
+
+    h1 {
+        font-size: 2rem; /* Further reduce heading size */
+    }
+
+    .chat-box img {
+        width: 40px; /* Adjust image size for very small screens */
+        height: 40px;
+    }
+
+    .faq-item h3 {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+ /* Chat popup container */
+ #chat-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  /* Header for toggling */
+  #chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Chat body (hidden by default) */
+  #chat-body {
+    display: none;
+    flex-direction: column;
+    max-height: 400px;
+  }
+  
+  /* Messages section */
+  #chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .message {
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 80%;
+  }
+  
+  .user-message {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .bot-message {
+    background: #f1f1f1;
+    color: black;
+    align-self: flex-start;
+  }
+  
+  /* Chat input section */
+  #chat-input {
+    display: flex;
+    padding: 10px;
+  }
+  
+  #message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  #send-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #send-button:hover {
+    background: #0056b3;
+  }
+  

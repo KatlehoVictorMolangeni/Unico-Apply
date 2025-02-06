@@ -1,0 +1,31 @@
+body{
+    background-color: blueviolet;
+    display: flex;
+    padding: 10px;
+}
+
+._box{
+    background-color: aqua;
+    width: 250px;
+    height: 220px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    margin-right: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+._box:hover{
+    transform: scale(1.1);
+}
+
+.box{
+    width: 210%;
+    max-width: 250px;
+    height: 220px;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    margin-left: 20px;
+}

@@ -3,47 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Style.css">
-    <link href="https://cdjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Unico-Apply</title>
+    <link rel="stylesheet" href="Home.css">
 </head>
-<body>
-    <div class="dashboard">
-        <h5>myUnico</h5>
-        <a href="#" id="notify"><img src="notifi-removebg-preview.png" alt="notification-icon"></a>
-    </div>
 
-    <section class="dash-body">
-        <div class="bodyy">
-            <h1>Welcome</h1>
-            <p>Keep up to date with myUnico dashboard</p>
-        </div>
-    </section>
-    <div class="container">
-        <h2>Apply for funding now</h2>
-        <p>Enter your details and upload all required documents for a successful submission</p>
-        <h3>Application is only open for the following:</h3>
-        <div class="availability">
+<body>
+    <section class="top">
+        <div class="navigation">
+            <div class="logo">
+                
+            <a href=""><img src="unicoApply.png" alt="Uni-coApply Logo"></a>
+            </div>
+            
             <ul>
-                <li>2025 TVET College</li>
-                <li>2025 TVET College</li>
-                <li>2025 TVET College</li>
+                <li><a href="FAQ.html" class="questions">FAQ</a></li>
+                <li><a href="myunico.html" class="unico">myUnico</a></li>
             </ul>
         </div>
-        <p1>Estimated 15 mins</p1>
-        <button id="apply">Apply Now</button>
-    </div>
-    <section>
-        <div class="status">
-            <h4>Application Tracker</h4>
-            <p id="tracker">Check your existing applications progress and make sure all documents are approved</p>
-            <a href="Time.html" target="_parent">
-                <img src="OIP-removebg-preview.png" alt="watch" >
-            </a>
-            <p id="existing">4 Existing applictaion</p>
-            <button id="view">View Application</button>
 
+        <div class="welcoming">
+            <h1><b>Welcome to <span class="name">Unico-Apply:</span><br> Simplifying Your Journey To Higher Education</b></h1>
+            <p class="para">Applying to universities and colleges has never been easier.<br> At Unico, we're here to guide South African Matric candidates every step of the way.<br> Let us handle the paperwork while you focus on shaping your future.
+                <span class="start"> <br><b>Start your journey with us today!</b></span></p>
+                <a href="Signup.html"><button id="register">Create Account</button></a>
+                
         </div>
     </section>
+
+    <section class="numbers-stats">
+        <div class="counter-section">
+            <div class="counter">
+                <h2 id="universities" data-target="26">0</h2>
+                <p>Universities in South Africa</p>
+            </div>
+            <div class="counter">
+                <h2 id="colleges" data-target="50">0</h2>
+                <p>Colleges in South Africa</p>
+            </div>
+            <div class="counter">
+                <h2 id="bursaries" data-target="100">0</h2>
+                <p>Public Bursaries Available</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="Home.js"></script>
 </body>
-</html>
+    
+
+</html> 

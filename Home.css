@@ -1,0 +1,163 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: orangered;
+    flex-wrap: wrap; /* Allows navigation to wrap on smaller screens */
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    transition: transform 0.5s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.welcoming {
+    text-align: center;
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+}
+
+.welcoming h1 {
+    font-size: 4.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.welcoming p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 10px 10px 20px 0;
+}
+
+.counter-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack counters on smaller screens */
+    gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .counter-section {
+        flex-direction: row; /* Horizontal layout for larger screens */
+        justify-content: space-around;
+    }
+}
+
+.counter {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 4rem;
+    color: #0047ab;
+}
+
+.counter p {
+    font-size: 1.1rem;
+    margin-top: 0.2px;
+}
+
+body {
+    background-image: url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure background covers full height */
+    width: 100%;
+}
+
+.unico {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.unico:hover {
+    background-color: blueviolet;
+    color: antiquewhite;
+}
+
+.questions:hover {
+    color: blue;
+}
+
+.name {
+    color: #0047ab;
+}
+
+.start {
+    margin: 10px 0;
+}
+
+#register {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: blueviolet;
+    color: antiquewhite;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#register:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+    .welcoming h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .navigation ul {
+        gap: 10px; /* Reduce spacing for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navigation ul {
+        flex-direction: column; /* Stack navigation links */
+        align-items: center;
+    }
+
+    .navigation {
+        text-align: center;
+    }
+
+    .welcoming h1 {
+        font-size: 2rem;
+    }
+
+    .welcoming p {
+        font-size: 0.9rem;
+    }
+}
