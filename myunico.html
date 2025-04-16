@@ -3,48 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myUnico</title>
-    <link rel="stylesheet" href="Style.css">
-    <link href="https://cdjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>myUnico | Dash</title>
     <link rel="Icon" type="jpg" href="unicoApply.png">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" /> 
 </head>
+
 <body>
-    <div class="dashboard">
-        <h5>myUnico</h5>
-        <a href="#" id="notify"><img src="notifi-removebg-preview.png" alt="notification-icon"></a>
-    </div>
 
-    <section class="dash-body">
-        <div class="bodyy">
-            <h1>Welcome</h1>
-            <p>Keep up to date with myUnico dashboard</p>
-        </div>
-    </section>
     <div class="container">
-        <h2>Apply for funding now</h2>
-        <p>Enter your details and upload all required documents for a successful submission</p>
-        <h3>Application is only open for the following:</h3>
-        <div class="availability">
-            <ul>
-                <li>2025 TVET College</li>
-                <li>2025 TVET College</li>
-                <li>2025 TVET College</li>
-            </ul>
-        </div>
-        <p1>Estimated 15 mins</p1>
-        <button id="apply">Apply Now</button>
-    </div>
-    <section>
-        <div class="status">
-            <h4>Application Tracker</h4>
-            <p id="tracker">Check your existing applications progress and make sure all documents are approved</p>
-            <a href="Time.html" target="_parent">
-                <img src="OIP-removebg-preview.png" alt="watch" >
-            </a>
-            <p id="existing">4 Existing applictaion</p>
-            <button id="view">View Application</button>
 
+        <!-- aside section start-->
+        <aside id="aside">
+
+            <!-- start top -->
+            <div class="top">
+                <div class="logo">
+                    <h2>my<span class="danger">Unico</span></h2>
+                </div>
+
+                <div class="close" id="close_btn">
+                    <span class="material-symbols-outlined"> close </span>
+                </div>
+            </div>
+            <!-- end top-->
+
+            <!-- start sidebar-->
+            <div class="sidebar" >
+
+                <a href="#">
+                    <span class="material-symbols-outlined"> grid_view </span>
+                <h3>Dashboard</h3>
+                </a>
+
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">
+                        person
+                        </span>
+                <h3>Profile</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        file_copy
+                        </span>
+                    <h3>Documents</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        note_add
+                        </span>
+                    <h3>Submit Application</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        task_alt
+                        </span>
+                    <h3>Track Status</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        notifications
+                        </span>
+                    <h3>Notifications</h3>
+                    <span class="msg_count">1</span>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        support_agent
+                        </span>
+                    <h3>Support</h3>
+                    <span class="msg_count">6</span>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        manage_accounts
+                        </span>
+                    <h3>Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        logout
+                        </span>
+                    <h3>Sign Out</h3>
+                </a>
+            </div>
+            <!-- end sidebar -->=
+        </aside>
+        <!-- aside section end-->
+
+
+
+        <!-- start main-->
+        <main>
+            <h1>Dashboard</h1>
+        
+            <div class="date">
+                <input type="date">
+            </div>
+        
+            <div class="insights">
+                <!-- number of applications -->
+                <div class="applications">
+                    <span class="material-symbols-outlined"> checklist </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Applications</h3>
+                            <h1>10+</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="10" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">80%</div>
+                        </div>
+                    </div>
+                    <small>Track Status</small>
+                </div>
+        
+                <!-- number of approved -->
+                <div class="applications">
+                    <span class="material-symbols-outlined"> tv_options_edit_channels </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Approved</h3>
+                            <h1>6</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="10" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">40%</div>
+                        </div>
+                    </div>
+                    <small>View Approved</small>
+                </div>
+        
+                <!-- number of rejected -->
+                <div class="applications">
+                    <span class="material-symbols-outlined"> dangerous </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Rejected</h3>
+                            <h1>4</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="10" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">40%</div>
+                        </div>
+                    </div>
+                    <small>View Rejected</small>
+                </div>
+            </div>
+
+
+            <div class="recent_application">
+
+           
+            <!-- start name of institutions -->
+            <h1>Institutions Applied To :</h1>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>Institution Name</th>
+                        <th>Institution Location</th>
+                        <th>Name Of Course</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+        
+                <tbody>
+                    <tr>
+                        <td>Sol Plaatje University</td>
+                        <td>Kimberley, Northern Cape</td>
+                        <td>Diploma in ICT</td>
+                        <td class="warning">Firm Offer</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Central University Of Technology</td>
+                        <td>Bloemfontein, Free State</td>
+                        <td>Diploma in Dental Technology</td>
+                        <td class="warning">In Progress</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Vaal University Of Technology</td>
+                        <td>Porchestrome, Gauteng</td>
+                        <td>Diploma in ICT</td>
+                        <td class="warning">Rejected</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </section>
+        </main>
+        
+        
+        <!-- end main -->
+
+        <!-- start right -->
+        <div class="right">
+            <div class="top">
+ 
+            <button id="menu_bar">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </button>
+
+            <div class="theme-toggler">
+                <span class="material-symbols-outlined active">
+                    light_mode
+                    </span>
+                    <span class="material-symbols-outlined">
+                        dark_mode
+                        </span>
+            </div>
+
+            <div class="profile">
+                <div class="info">
+                    <p><b>Bontle</b></p>
+                    <p>Learner</p>
+                    <small class="text-muted"></small>
+                </div>
+                <div class="profile-photo">
+                    <img src="learning2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- end  top-->
+
+        <div class="recent_updates">
+            <h1>Recent Update</h1>
+
+            <div class="updates">
+            <div class="update">
+                <div class="profile-photo">
+                    <img src="spu.jpg" alt="SPU">
+                </div>
+                <div class="message">
+                    <p><b>SPU</b> Application are open</p>
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="profile-photo">
+                    <img src="uj.jpg" alt="SPU">
+                </div>
+                <div class="message">
+                    <p><b>UJ</b> Application are open</p>
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="profile-photo">
+                    <img src="nwu.jpg" alt="SPU">
+                </div>
+                <div class="message">
+                    <p><b>NWU</b> Application are open</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="calculate_aps">
+            <h1>Calculate APS:</h1>
+            <div class="subjects">
+                <p><b>Enter your subject levels :</b></p>
+                <input type="number" placeholder="Home Language Level" id="home-language" required>
+                <span class="error-message" id="negative-error-home-language"></span>
+                
+                <input type="number" placeholder="First Additional Level" id="fal" required>
+                <span class="error-message" id="negative-error-fal"></span>
+                
+                <input type="number" placeholder="Mathematics Level" id="maths" required>
+                <span class="error-message" id="negative-error-maths"></span>
+                
+                <input type="number" placeholder="Life Orientation Level" id="lo" required>
+                <span class="error-message" id="negative-error-lo"></span>
+                
+                <input type="number" placeholder="Subject 5 Level" id="sub-five" required>
+                <span class="error-message" id="negative-error-sub-five"></span>
+                
+                <input type="number" placeholder="Subject 6 Level" id="sub-six" required>
+                <span class="error-message" id="negative-error-sub-six"></span>
+                
+                <input type="number" placeholder="Subject 7 Level" id="sub-sev" required>
+                <span class="error-message" id="negative-error-sub-sev"></span>
+        
+                <button type="submit" id="calc">Calculate</button>
+        
+                <input type="text" id="sum">
+            </div>
+        </div>
+        </div>
+        <!-- end right -->
+    </div>
+
+    <script src="dashboard.js"></script>
+
+
 </body>
 </html>

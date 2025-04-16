@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+    <link rel="Icon" type="jpg" href="unicoApply.png">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div class="login">
+        <h1>Hey, Mgani</h1>
+        <h2>It's Heart Warming To See You Again</h2>
+        <div class="logo">
+            <a href="#"><img src="unicoApply.png" alt="Uni-coApply Logo"></a>
+        </div>
+        <form id="login-form" action="login.php" method="POST">
+            <fieldset>
+                <legend>Please Login Below</legend>
+
+                <b>ID Number :</b><br>
+                <input type="text" id="idNumber" name="idNumber" required><br/>
+
+                <b>Password :</b><br/>
+                <input type="password" id="password" name="password" required><br/>
+
+                <button type="submit" id="login-button">Login</button>
+            </fieldset>
+
+            <a href="Signup.html">Register</a><br/>
+            <a href="#">Forgot Password</a>
+
+            <p>By logging in to our platform, you agree to our <a href="Privacy.html">Privacy Policy</a></p>
+        </form>
+    </div>
+
+    <!-- Overlay for blur effect -->
+    <div id="overlay" class="overlay">
+        <div id="loading-container" class="loading-container">
+            <div class="loading">Logging in...</div>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

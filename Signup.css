@@ -97,3 +97,18 @@ legend {
 .logo img:hover {
     transform: scale(1.1);
 }
+
+p{
+    font-weight: 10px;
+    color: rgb(172, 141, 141);
+    text-align: center;
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: medium;
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="otp.css">
+    <link rel="Icon" type="jpg" href="unicoApply.png">
+</head>
+
+
+<body>
+    <div class="logo">
+        <a href="#"><img src="unicoApply.png" alt="Uni-coApply Logo"></a>
+    </div>
+    
+
+    <div class="otp-container">
+        <h2>Enter OTP</h2>
+        <form id="otpForm">
+            <div class="otp-input">
+                <input type="text" id="otp1" maxlength="1" required>
+                <input type="text" id="otp2" maxlength="1" required>
+                <input type="text" id="otp3" maxlength="1" required>
+                <input type="text" id="otp4" maxlength="1" required>
+            </div>
+            <button type="submit">Verify OTP</button>
+        </form>
+    </div>
+
+    <!-- Loading overlay (hidden by default) -->
+    <div id="overlay" class="overlay" style="display: none;">
+        <div class="loading">
+            <div class="progress-bar" id="progress-bar"></div>
+            <div>Verifying OTP...</div>
+        </div>
+    </div>
+
+    <script src="Otp.js"></script>
+</body>
+</html>
